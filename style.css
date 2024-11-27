@@ -1,0 +1,79 @@
+/* Estilo general para el cuerpo y la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evitar desplazamientos horizontales */
+    background-color: #99b2e3;
+}
+
+/* Estilo para el contenedor de la Pokédex */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: rgb(250, 249, 253);
+}
+
+.pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-card {
+    width: 150px;
+    margin: 15px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transición para la tarjeta */
+}
+
+.pokemon-card:hover {
+    transform: scale(1.1); /* Escala la tarjeta al pasar el ratón */
+}
+
+.pokemon-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.pokemon-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1; /* Asegurarnos de que está sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    padding-top: 60px; /* Espacio superior */
+    overflow: auto; /* Permite hacer scroll en el modal si el contenido es muy grande */
+    transition: opacity 0.3s ease; /* Transición para suavizar el efecto de apertura */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: white;
+    margin: 5% auto; /* Centrado automático */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px; /* Limitar el tamaño del modal */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenido del modal */
+    position: relative;
+}
+
+
