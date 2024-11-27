@@ -1,4 +1,4 @@
-/* Estilo general para el cuerpo y la página */
+/*Generales*/
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
@@ -6,12 +6,40 @@ body {
     overflow-x: hidden; /* Evitar desplazamientos horizontales */
     background-color: #99b2e3;
 }
+/* Estilo para el título */
 h1 {
-    text-align: center;
-    font-family: 'Engravers MT';
-    font-size: 100px;
-    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif; 
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: #f7f6f2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-transform: uppercase; 
+    animation: titleAnim 1s ease-out; /* Añadir una animación para cuando aparece */
 }
+
+/* Animación para el título */
+@keyframes titleAnim {
+    0% {
+        transform: translateY(-30px); /* Empujar el título hacia arriba */
+        opacity: 0; /* Hacerlo invisible al principio */
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mejores estilos para móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Reducir el tamaño del título en pantallas pequeñas */
+        text-align: center; /* Centrar el título en pantallas pequeñas */
+        margin-bottom: 20px; /* Menos espacio debajo */
+    }
+}
+
 
 /* Estilo para el contenedor de la Pokédex */
 .container {
